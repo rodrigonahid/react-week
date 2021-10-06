@@ -1,3 +1,4 @@
+import React from "react";
 import styled from "styled-components";
 
 const AddTaskWrapper = styled.div`
@@ -35,12 +36,38 @@ const AddTaskWrapper = styled.div`
   }
 `;
 
-export function AddTask(){
+type Props = {
+  onEnter: (taskName: string) => void
+}
+
+export function AddTask({onEnter}: Props){
+  const [inputText, setInputText] = React.useState('');
+
+  function handleKeyUp(item: React.KeyboardEvent){
+    if(item.code === 'Enter' && inputText !== ''){
+      onEnter(inputText)
+      setInputText('')
+    }
+  }
+  function handleClick(item: React.MouseEvent){
+    if(inputText !== ''){
+      onEnter(inputText)
+      setInputText('')
+    }
+  }
+
   return(
     <AddTaskWrapper>
-      <div className="image">+</div>
+      <div className="image" onClick={handleClick}>+</div>
       <div className="input">
-        <input type="text" />
+        <input
+          type="text"
+          value={inputText}
+          onChange={e => {
+            setInputText(e.target.value);
+          }} 
+          onKeyUp={handleKeyUp}
+        />
       </div>
     </AddTaskWrapper>
   )

@@ -35,7 +35,7 @@ type Props = {
 
 export function ListItem({item}: Props){
   const [isChecked, setIsChecked] = React.useState(item.done)
-  console.log(isChecked)
+
   return(
     <List done={isChecked}>
       <input 
