@@ -35,6 +35,10 @@ const Projects = [
   {
     name: 'Dia 1 - ToDo List',
     link: '/todo-list'
+  },
+  {
+    name: 'Dia 2 - Finance Control',
+    link: '/finances'
   }
 ]
 
