@@ -39,6 +39,10 @@ const Projects = [
   {
     name: 'Dia 2 - Finance Control',
     link: '/finances'
+  },
+  {
+    name: 'Dia 3 - Image Gallery w/ firebase',
+    link: '/image-gallery'
   }
 ]
 

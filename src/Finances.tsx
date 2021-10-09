@@ -6,6 +6,7 @@ import { Categories } from "./data/Categories";
 import { getCurrentMonth, filterListByMonth } from "./components/DateFilter";
 import { TableArea } from "./components/TableArea";
 import { InfoArea } from "./components/InfoArea";
+import { HomeLink } from "./components/HomeLink";
 
 const FinancesWrapper = styled.div`
   
@@ -46,6 +47,7 @@ export function Finances(){
   return (
     <Container>
       <Header>
+        <HomeLink />
         <h1>Finance Controller</h1>
       </Header>
       <FinancesWrapper>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Header } from './App.styles';
 import { AddTask } from './components/AddTask';
+import { HomeLink } from './components/HomeLink';
 import { ListItem } from './components/ListItem';
 import { Item } from './types/Item';
 
@@ -25,6 +26,7 @@ export function TodoList(){
     <div className="App">
       <Container>
         <Header>
+          <HomeLink />
           <h1>To-do list</h1>
         </Header>
         <AddTask onEnter={handleAddTask} />
